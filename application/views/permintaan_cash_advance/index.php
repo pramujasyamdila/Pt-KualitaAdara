@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
                <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="<?= base_url('admin') ?>">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Permintaan Dana</li>
+                  <li class="breadcrumb-item active" aria-current="page">Permintaan Cash Advance</li>
                </ol>
             </nav>
             <div class="callout callout-danger" style="background: rgb(232,147,67);background: radial-gradient(circle,rgba(232,147,67,1) 0%, rgba(251,250,101,1) 100%);">
@@ -20,7 +20,7 @@
                <input type="hidden" name="person_created" value="<?= $this->session->userdata('username'); ?>">
                <div class="row">
                   <div class="card card-outline card-orange col-md-6">
-                     <div class="card-header"><i class="fas fa-list-alt"></i> Form Permintaan Dana</div>
+                     <div class="card-header"><i class="fas fa-list-alt"></i> Permintaan Cash Advance</div>
                      <div class="card-body">
                         <div class="row">
                            <div class="col-md-12">
@@ -32,7 +32,7 @@
                                           <div class="input-group-prepend">
                                              <div class="input-group-text"><i class="fas fa-user-tag"></i></div>
                                           </div>
-                                          <input type="text" class="form-control" name="nama_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="Nama">
+                                          <input type="text" class="form-control" name="nama_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="Nama">
                                        </div>
                                     </div>
                                     <div class="form-group">
@@ -42,7 +42,7 @@
                                              <div class="input-group-prepend">
                                                 <div class="input-group-text"><i class="fas fa-users"></i></div>
                                              </div>
-                                             <input type="text" class="form-control" name="divisi_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="Divisi">
+                                             <input type="text" class="form-control" name="divisi_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="Divisi">
                                           </div>
                                        </div>
                                     </div>
@@ -53,7 +53,7 @@
                                              <div class="input-group-prepend">
                                                 <div class="input-group-text"><i class="fas fa-user-tie"></i></div>
                                              </div>
-                                             <input type="text" class="form-control" name="jabatan_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="Jabatan">
+                                             <input type="text" class="form-control" name="jabatan_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="Jabatan">
                                           </div>
                                        </div>
                                     </div>
@@ -64,7 +64,7 @@
                                              <div class="input-group-prepend">
                                                 <div class="input-group-text"><i class="fas fa-dollar-sign"></i></div>
                                              </div>
-                                             <input type="text" class="form-control" name="total_permintaan_dana" readonly id="inlineFormInputGroupUsername totalnya">
+                                             <input type="text" class="form-control" name="total_permintaan_cash_advance" readonly id="inlineFormInputGroupUsername">
                                           </div>
                                        </div>
                                     </div>
@@ -76,7 +76,7 @@
                                           <div class="input-group-prepend">
                                              <div class="input-group-text"><i class="fas fa-calendar-day"></i></div>
                                           </div>
-                                          <input type="date" class="form-control" name="tanggal_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="Tanggal">
+                                          <input type="date" class="form-control" name="tanggal_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="Tanggal">
                                        </div>
                                     </div>
                                     <div class="form-group">
@@ -85,7 +85,7 @@
                                           <div class="input-group-prepend">
                                              <div class="input-group-text"><i class="fas fa-broadcast-tower"></i></div>
                                           </div>
-                                          <input type="text" class="form-control" name="nama_site_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="Nama Site">
+                                          <input type="text" class="form-control" name="nama_site_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="Nama Site">
                                        </div>
                                     </div>
                                     <div class="form-group">
@@ -94,7 +94,7 @@
                                           <div class="input-group-prepend">
                                              <div class="input-group-text"><i class="fas fa-chalkboard-teacher"></i></div>
                                           </div>
-                                          <input type="text" class="form-control" name="project_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="Project">
+                                          <input type="text" class="form-control" name="project_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="Project">
                                        </div>
                                     </div>
                                     <div class="form-group">
@@ -103,7 +103,7 @@
                                           <div class="input-group-prepend">
                                              <div class="input-group-text"><i class="fas fa-people-arrows"></i></div>
                                           </div>
-                                          <input type="text" class="form-control" name="cutomer_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="Username">
+                                          <input type="text" class="form-control" name="customer_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="Username">
                                        </div>
                                     </div>
                                  </div>
@@ -125,7 +125,7 @@
                                           <div class="input-group-prepend">
                                              <div class="input-group-text"><i class="far fa-credit-card"></i></div>
                                           </div>
-                                          <select type="text" class="form-control  select2bs4" name="jenis_pembayaran_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="Jenis Pembayaran">
+                                          <select type="text" class="form-control  select2bs4" name="jenis_pembayarn_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="Jenis Pembayaran">
                                              <option value="Transfer">Transfer</option>
                                              <option value="Tunai">Tunai</option>
                                           </select>
@@ -138,7 +138,7 @@
                                              <div class="input-group-prepend">
                                                 <div class="input-group-text"><i class="fas fa-user-tag"></i></div>
                                              </div>
-                                             <input type="text" class="form-control" name="nama_penerima_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="Nama Penerima">
+                                             <input type="text" class="form-control" name="nama_penerima_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="Nama Penerima">
                                           </div>
                                        </div>
                                     </div>
@@ -150,7 +150,7 @@
                                           <div class="input-group-prepend">
                                              <div class="input-group-text"><i class="fas fa-university"></i></div>
                                           </div>
-                                          <input type="text" class="form-control" name="bank_penerima_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="Bank">
+                                          <input type="text" class="form-control" name="bank_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="Bank">
                                        </div>
                                     </div>
                                     <div class="form-group">
@@ -159,14 +159,14 @@
                                           <div class="input-group-prepend">
                                              <div class="input-group-text"><i class="fas fa-funnel-dollar"></i></div>
                                           </div>
-                                          <input type="text" class="form-control" name="keterangan_penerima_permintaan_dana" id="inlineFormInputGroupUsername" placeholder="No Rekeninig">
+                                          <input type="text" class="form-control" name="nomor_rekening_permintaan_cash_advance" id="inlineFormInputGroupUsername" placeholder="No Rekeninig">
                                        </div>
                                     </div>
                                  </div>
                               </div>
                               <div class="form-group">
                                  <p>Keterangan <label for="" class="text-danger">*</label></p>
-                                 <textarea name="keterangan_penerima_permintaan_dana" id="summernote"></textarea>
+                                 <textarea name="keterangan_permintaan_cash_advance" id="summernote"></textarea>
                               </div>
                            </div>
                         </div>
@@ -186,10 +186,10 @@
                               <th></th>
                            </tr>
                            <tr>
-                              <td><input type="text" name="nama_deskripsi_permintaan_dana[]" class="form-control form-control-sm"></td>
-                              <td><input type="text" id="satuan" name="harga_satuan_deskripsi_permintaan_dana[]" class="form-control form-control-sm"></td>
-                              <td><input type="text" id="harga" name="harga_deskripsi_permintaan_dana[]" class="form-control form-control-sm"></td>
-                              <td><input type="text" id="jumlah" name="total_deskripsi_permintaan_dana[]" class="form-control form-control-sm"></td>
+                              <td><input type="text" name="nama_deskripsi_permintaan_cash_advance[]" class="form-control form-control-sm"></td>
+                              <td><input type="text" id="satuan" name="harga_satuan_deskripsi_permintaan_cash_advance[]" class="form-control form-control-sm"></td>
+                              <td><input type="text" id="harga" name="harga_deskripsi_permintaan_cash_advance[]" class="form-control form-control-sm"></td>
+                              <td><input type="text" id="jumlah" name="total_deskripsi_permintaan_cash_advance[]" class="form-control form-control-sm"></td>
                               <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
                            </tr>
                         </table>

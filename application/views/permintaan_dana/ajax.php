@@ -1,32 +1,31 @@
 <script>
    $(document).ready(function() { // Ketika halaman sudah diload dan siap
-      $("#btn-tambah-deskripsi").click(function() { // Ketika tombol Tambah Data deskripsi di klik
-         var jumlah = parseInt($("#jumlah-deskripsi").val()); // Ambil jumlah data deskripsi pada textbox jumlah-deskripsi
-         var nextdeskripsi = jumlah + 1; // Tambah 1 untuk jumlah deskripsi nya
-         // Kita akan menambahkan deskripsi dengan menggunakan append
-         // pada sebuah tag div yg kita beri id insert-deskripsi
-         $("#insert-deskripsi").append(
-            '<table class="table table table-bordered table-striped">' +
-            '<thead class="text-center">' +
-            '<tr>' +
-            '</tr>' +
-            '</thead>' +
-            '<tbody class="text-center">' +
-            '<tr>' +
-            '<td><input type="text" name="nama_deskripsi_permintaan_dana[]" class="form-control"></td>' +
-            '<td><input type="text" name="harga_satuan_deskripsi_permintaan_dana[]" class="form-control"></td>' +
-            '<td><input type="text" name="harga_deskripsi_permintaan_dana[]" class="form-control"></td>' +
-            '<td><input type="text" name="total_deskripsi_permintaan_dana[]" class="form-control"></td>' +
-            '</tr>' +
-            '</tbody>' +
-            '</table>');
 
-         $("#jumlah-deskripsi").val(nextdeskripsi); // Ubah value textbox jumlah-deskripsi dengan variabel nextdeskripsi
+      var i = 1;
+      $('#add').click(function() {
+         i++;
+
+         $('#dynamic_field').append('<tr id="row' + i + '">' +
+            '<td><input type="text"  name="nama_deskripsi_permintaan_dana[]" class="form-control"></td>' +
+            '<td><input type="text"  id="satuan' + i + '" name="harga_satuan_deskripsi_permintaan_dana[]" class="form-control"></td>' +
+            '<td><input type="text"  id="harga' + i + '" name="harga_deskripsi_permintaan_dana[]" class="form-control"></td>' +
+            '<td><input type="text"  id="jumlah' + i + '"  name="total_deskripsi_permintaan_dana[]" class="form-control"></td>' +
+            '<td><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">X</button></td>' +
+            '</tr>');
+
+         var harga_after = $('#jumlah').val()
+         $("#satuan" + i + ", #harga" + i + "").keyup(function() {
+            var harga2 = $("#harga" + i + "").val();
+            var satuan2 = $("#satuan" + i + "").val();
+            var jumlah2 = parseInt(satuan2) * parseInt(harga2);
+            $("#jumlah" + i + "").val(jumlah2);
+            $('#totalnya').val(jumlah2 + i + i++)
+         });
       });
-      // Buat fungsi untuk mereset deskripsi ke semula
-      $("#btn-reset-deskripsi").click(function() {
-         $("#insert-deskripsi").html(""); // Kita kosongkan isi dari div insert-deskripsi
-         $("#jumlah-deskripsi").val("1"); // Ubah kembali value jumlah deskripsi menjadi 1
+
+      $(document).on('click', '.btn_remove', function() {
+         var button_id = $(this).attr("id");
+         $('#row' + button_id + '').remove();
       });
 
    });
@@ -34,12 +33,6 @@
    $(function() {
       // Summernote
       $('#summernote').summernote()
-
-      // CodeMirror
-      CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-         mode: "htmlmixed",
-         theme: "monokai"
-      });
    })
 
    $(function() {
@@ -87,4 +80,12 @@
          }
       })
    }
+
+   $("#satuan, #harga").keyup(function() {
+      var harga = $("#harga").val();
+      var satuan = $("#satuan").val();
+
+      var jumlah = parseInt(harga) * parseInt(satuan);
+      $("#jumlah").val(jumlah);
+   });
 </script>

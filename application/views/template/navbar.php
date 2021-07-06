@@ -16,8 +16,11 @@
             <li class="nav-item">
                <a href="index3.html" class="nav-link">Dashboard</a>
             </li>
-            <li class="nav-item">
-               <a href="#" class="nav-link">Sumary Report </a>
+            <li class="nav-item dropdown">
+               <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Summary Report</a>
+               <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                  <li><a href="<?= base_url('permintaan_cash_advance/data_laporan_advance') ?>" class="dropdown-item">LAPORAN CASH ADVANCE</a></li>
+               </ul>
             </li>
             <li class="nav-item">
                <a href="#" class="nav-link">Request Cuti </a>
@@ -25,9 +28,9 @@
             <li class="nav-item dropdown">
                <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Master</a>
                <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                  <li><a href="<?= base_url('pegawai') ?>" class="dropdown-item">Pegawai</a></li>
                   <li><a href="<?= base_url('permintaan_dana') ?>" class="dropdown-item">PERMINTAAN DANA</a></li>
-                  <li><a href="#" class="dropdown-item">PERMINTAAN CASH ADVANCE</a></li>
-                  <li><a href="#" class="dropdown-item">LAPORAN CASH ADVANCE</a></li>
+                  <li><a href="<?= base_url('Permintaan_cash_advance') ?>" class="dropdown-item">PERMINTAAN CASH ADVANCE</a></li>
                   <li><a href="#" class="dropdown-item">FORMULIR TUGAS LUAR KOTA</a></li>
                   <li><a href="#" class="dropdown-item">PENGAJUAN CASH ADVANCE LUAR KOTA</a></li>
                   <li><a href="#" class="dropdown-item">LAPORAN CASH ADVANCE LUAR KOTA</a></li>

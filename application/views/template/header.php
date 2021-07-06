@@ -25,6 +25,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
    <!-- Sweetalert-->
    <link href="<?= base_url('assets/'); ?>sweetalert2/sweetalert2.min.css" rel="stylesheet">
    <script src="<?= base_url('assets/'); ?>js/sweetalert.min.js"></script>
+   <!-- DataTables -->
+   <link rel="stylesheet" href="<?= base_url('assets/admin_lte/') ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+   <link rel="stylesheet" href="<?= base_url('assets/admin_lte/') ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+   <link rel="stylesheet" href="<?= base_url('assets/admin_lte/') ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 <?php
 $this->role_login->cek_login();
